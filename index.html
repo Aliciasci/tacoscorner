@@ -1,0 +1,751 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu Restaurant</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Header avec damier violet et blanc -->
+    <div class="checkered-header"></div>
+    <div class="checkered-row"></div>
+
+    <div class="container">
+      <!-- Section Filtres -->
+      <!-- <div class="filter-section">
+        <div class="filter-buttons">
+          <button class="filter-btn active" onclick="filterMenu('all')">
+            Tout Voir
+          </button>
+          <button class="filter-btn" onclick="filterMenu('burgers')">
+            🍔 Burgers
+          </button>
+          <button class="filter-btn" onclick="filterMenu('tacos')">
+            🌯 Tacos
+          </button>
+          <button class="filter-btn" onclick="filterMenu('sandwichs')">
+            🥙 Sandwichs
+          </button>
+          <button class="filter-btn" onclick="filterMenu('bowls')">
+            🥗 Bowls
+          </button>
+          <button class="filter-btn" onclick="filterMenu('assiettes')">
+            🍽️ Assiettes
+          </button>
+          <button class="filter-btn" onclick="filterMenu('tex-mex')">
+            🌶️ Tex-Mex
+          </button>
+        </div>
+      </div> -->
+
+      <!-- ================= SECTION TACOS ================= -->
+<div class="menu-category active" data-category="tacos">
+        <div class="section-header">
+          <h1>Composez vos Tacos</h1>
+        </div>
+
+        <!-- Tailles des Tacos -->
+        <div class="info-box">
+          <h3>🌯 Tailles disponibles</h3>
+          <div class="tacos-sizes-display">
+            <div class="size-card size-simple">
+              <img
+                src="images/tacos-taille.png"
+                alt="Tacos Simple"
+                class="size-image"
+              />
+              <div class="size-info">
+                <span class="size-name">Simple</span>
+                <span class="size-detail">1 Viande</span>
+              </div>
+              <div class="item-price">7.00€</div>
+            </div>
+
+            <div class="size-card size-double">
+              <img
+                src="images/tacos-taille.png"
+                alt="Tacos Double"
+                class="size-image"
+              />
+              <div class="size-info">
+                <span class="size-name">Double</span>
+                <span class="size-detail">2 Viandes</span>
+              </div>
+              <div class="item-price">9.00€</div>
+            </div>
+
+            <div class="size-card size-maxi">
+              <img
+                src="images/tacos-taille.png"
+                alt="Tacos Maxi"
+                class="size-image"
+              />
+              <div class="size-info">
+                <span class="size-name">Maxi</span>
+                <span class="size-detail">3 Viandes</span>
+              </div>
+              <div class="item-price">11.00€</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Choix des Viandes -->
+        <div class="info-box">
+          <h3>🥩 Viandes au choix</h3>
+          <div class="ingredients-grid">
+            <div class="ingredient-card">
+              <img
+                src="images/kebab.png"
+                alt="Kebab"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Kebab</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/poulet.webp"
+                alt="Poulet"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Poulet</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/steack.png"
+                alt="Viande hachée"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Viande hachée</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/falafel.png"
+                alt="Falafel"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Falafel</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/mergez.png"
+                alt="Mergez"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Mergez</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Choix des Sauces -->
+        <div class="info-box">
+          <h3>🌶️ Sauces au choix</h3>
+          <div class="sauces-display">
+            <div class="sauce-item">
+              <img
+                src="images/sauce_blanche.png"
+                alt="Sauce Blanche"
+                class="sauce-img"
+              />
+              <span>Blanche</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_blanche.png"
+                alt="Sauce Fromagère"
+                class="sauce-img"
+              />
+              <span>Fromagère</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Harissa"
+                class="sauce-img"
+              />
+              <span>Harissa</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Samouraï"
+                class="sauce-img"
+              />
+              <span>Samouraï</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_barbecue.png"
+                alt="Barbecue"
+                class="sauce-img"
+              />
+              <span>Barbecue</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_algerienne.png"
+                alt="Algérienne"
+                class="sauce-img"
+              />
+              <span>Algérienne</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Andalouse"
+                class="sauce-img"
+              />
+              <span>Andalouse</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Curry"
+                class="sauce-img"
+              />
+              <span>Curry</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Suppléments -->
+  <div class="info-box">
+    <h3>➕ Suppléments</h3>
+    <div class="horizontal-scroll">
+        <div class="horizontal-item">
+            <img src="images/supplement-fromage.png" alt="Fromage">
+            Fromage
+        </div>
+        <div class="horizontal-item">
+            <img src="images/supplement-oeuf.png" alt="Œuf">
+            Œuf
+        </div>
+        <div class="horizontal-item">
+            <img src="images/supplement-jalapenos.png" alt="Jalapeños">
+            Jalapeños
+        </div>
+        <div class="horizontal-item">
+            <img src="images/supplement-oignons.png" alt="Oignons">
+            Oignons
+        </div>
+        <div class="horizontal-item">
+            <img src="images/supplement-bacon.png" alt="Bacon">
+            Bacon
+        </div>
+    </div>
+</div>
+
+
+    <div class="info-box">
+    <h3>🧀 Tacos Gratiné</h3>
+    <div class="sauces-display">
+        <div class="sauce-item">
+            <img src="images/tacos-gratine.png" alt="Tacos Gratiné" class="sauce-img">
+            <span>Gratiné Classique</span>
+            <div class="item-price">+ 1.50€</div>
+        </div>
+        <div class="sauce-item">
+            <img src="images/tacos-gratine-maxi.png" alt="Tacos Gratiné Maxi" class="sauce-img">
+            <span>Gratiné Maxi</span>
+            <div class="item-price">+ 2.00€</div>
+        </div>
+    </div>
+</div>
+
+
+      <!-- ================= SECTION BURGERS ================= -->
+      <div class="menu-category active" data-category="burgers">
+
+        <div class="section-header">
+          <h1>Nos Burgers</h1>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Classique Cheese"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Classique Cheese 🍔</h3>
+              <p>Steak Haché • Double Cheddar Affiné • Sauce Biggy Burger</p>
+              <div class="card-price">7.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Mexico Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Mexico Burger 🌮</h3>
+              <p>
+                Steak Haché • Double Cheddar Affiné • Poivrons Grillés •
+                Samouraï
+              </p>
+              <div class="card-price">8.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Garden Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Garden Burger 🌱</h3>
+              <p>
+                Galette De Légumes • Cheddar • Poivrons Grillés • Sauce Blanche
+              </p>
+              <div class="card-price">7.00€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Montagnard Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Montagnard Burger 🧀</h3>
+              <p>
+                Steak Haché Frais • Raclette Fondue • Lardons Fumés • Sauce
+                Magic Onion
+              </p>
+              <div class="card-price">9.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Crousty Chicken"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Crousty Chicken 🍗</h3>
+              <p>Poulet Pané • Mozzarella Stick • Cheddar • Sauce Biggy</p>
+              <div class="card-price">8.00€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Brooklyn Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Brooklyn Burger 🥓</h3>
+              <p>Steak Haché • Double Cheddar • Bacon • Sauce Biggy</p>
+              <div class="card-price">8.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Chèvre Miel Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Chèvre Miel Burger 🍯</h3>
+              <p>Steak Haché • Chèvre • Miel</p>
+              <div class="card-price">8.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/burger.png"
+              alt="Double Cheese Burger"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Double Cheese Burger 🍔🍔</h3>
+              <p>
+                Double Steak Haché • Double Cheddar Affiné • Sauce Biggy Burger
+              </p>
+              <div class="card-price">9.50€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SECTION SANDWICHS ================= -->
+      <div class="menu-category" data-category="sandwichs">
+
+        <div class="section-header">
+          <h1>Nos Sandwichs</h1>
+        </div>
+
+        <!-- Pain au choix -->
+        <div class="info-box">
+          <h3>🥖 Pain au choix</h3>
+          <div class="price-list">
+            <div class="price-item">
+              <img
+                src="images/pain-turc.png"
+                alt="Pain Turc"
+                class="item-thumb"
+              />
+              <span class="item-name">Pain Turc</span>
+              <span class="item-price">7.50€</span>
+            </div>
+            <div class="price-item">
+              <img
+                src="images/pain-galette.png"
+                alt="Galette"
+                class="item-thumb"
+              />
+              <span class="item-name">Galette</span>
+              <span class="item-price">7.50€</span>
+            </div>
+          </div>
+        </div>
+
+         <div class="info-box">
+          <h3>🥩 Viandes au choix</h3>
+          <div class="ingredients-grid">
+            <div class="ingredient-card">
+              <img
+                src="images/kebab.png"
+                alt="Kebab"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Kebab</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/poulet.webp"
+                alt="Poulet"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Poulet</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/steack.png"
+                alt="Viande hachée"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Viande hachée</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/falafel.png"
+                alt="Falafel"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Falafel</span>
+            </div>
+            <div class="ingredient-card">
+              <img
+                src="images/mergez.png"
+                alt="Mergez"
+                class="ingredient-image"
+              />
+              <span class="ingredient-name">Mergez</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sauces -->
+       <div class="info-box">
+          <h3>🌶️ Sauces au choix</h3>
+          <div class="sauces-display">
+            <div class="sauce-item">
+              <img
+                src="images/sauce_blanche.png"
+                alt="Sauce Blanche"
+                class="sauce-img"
+              />
+              <span>Blanche</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_blanche.png"
+                alt="Sauce Fromagère"
+                class="sauce-img"
+              />
+              <span>Fromagère</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Harissa"
+                class="sauce-img"
+              />
+              <span>Harissa</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Samouraï"
+                class="sauce-img"
+              />
+              <span>Samouraï</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_barbecue.png"
+                alt="Barbecue"
+                class="sauce-img"
+              />
+              <span>Barbecue</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_algerienne.png"
+                alt="Algérienne"
+                class="sauce-img"
+              />
+              <span>Algérienne</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Andalouse"
+                class="sauce-img"
+              />
+              <span>Andalouse</span>
+            </div>
+            <div class="sauce-item">
+              <img
+                src="images/sauce_harissa.png"
+                alt="Curry"
+                class="sauce-img"
+              />
+              <span>Curry</span>
+            </div>
+          </div>
+        </div>
+
+      <!-- ================= SECTION BOWLS ================= -->
+   <div class="menu-category" data-category="bowls">
+
+        <div class="section-header">
+          <h1>Nos Bowls</h1>
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Kebab" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Kebab 🥙</h3>
+              <p>
+                Riz • Sauce Fromagère • Kebab • Oignons Frits • Persil • Sauce
+                Blanche
+              </p>
+              <div class="card-price">9.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Veggie" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Veggie 🌱</h3>
+              <p>
+                Riz • Sauce Fromagère • Falafel • Oignons Frits • Persil • Sauce
+                Blanche
+              </p>
+              <div class="card-price">8.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Poulet" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Poulet 🍗</h3>
+              <p>
+                Riz • Sauce Fromagère • Poulet • Oignons Frits • Persil • Sauce
+                Aigre Douce
+              </p>
+              <div class="card-price">9.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Crousty" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Crousty 🍗</h3>
+              <p>
+                Riz • Sauce Fromagère • Tenders • Frites • Persil • Sauce Aigre
+                Douce
+              </p>
+              <div class="card-price">10.00€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Savoyard" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Savoyard 🧀</h3>
+              <p>
+                Lardons • Frites • Sauce Fromagère • Mozzarella • Bacon • Sauce
+                Cheddar
+              </p>
+              <div class="card-price">10.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/bowl.png" alt="Bowl Viande" class="card-image" />
+            <div class="card-content">
+              <h3>Bowl Viande 🥩</h3>
+              <p>
+                Riz • Sauce Fromagère • Viande hachée • Oignons Frits • Persil •
+                Sauce Blanche
+              </p>
+              <div class="card-price">11.00€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SECTION ASSIETTES ================= -->
+     <div class="menu-category" data-category="assiettes">
+
+        <div class="section-header">
+          <h1>Nos Assiettes</h1>
+          <img
+            src="images/header_assiettes.png"
+            alt="Assiette"
+            class="header-image"
+          />
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card">
+            <img
+              src="images/assiette-kebab.png"
+              alt="Assiette Kebab"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Assiette Kebab</h3>
+              <div class="card-price">11.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/assiette-poulet.png"
+              alt="Assiette Poulet"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Assiette Poulet</h3>
+              <div class="card-price">11.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/assiette-falafel.png"
+              alt="Assiette Falafel"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Assiette Falafel</h3>
+              <div class="card-price">10.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/assiette-steak.png"
+              alt="Assiette Steak"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Assiette Steak haché</h3>
+              <div class="card-price">11.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img
+              src="images/assiette-mixte.png"
+              alt="Assiette Mixte"
+              class="card-image"
+            />
+            <div class="card-content">
+              <h3>Assiette Mixte</h3>
+              <div class="card-price">12.50€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= SECTION TEX-MEX ================= -->
+      <div class="menu-category" data-category="tex-mex">
+
+        <div class="section-header">
+          <h1>Tex-Mex</h1>
+          <img
+            src="images/header_texmex.png"
+            alt="Tex-Mex"
+            class="header-image"
+          />
+        </div>
+
+        <div class="menu-grid">
+          <div class="menu-card">
+            <img src="images/tenders.png" alt="Tenders" class="card-image" />
+            <div class="card-content">
+              <h3>Tenders 🍗</h3>
+              <div class="card-price">7.50€</div>
+            </div>
+          </div>
+
+          <div class="menu-card">
+            <img src="images/wings.png" alt="Wings" class="card-image" />
+            <div class="card-content">
+              <h3>Wings 🍗🍗</h3>
+              <div class="card-price">9.00€</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= FORMULES & SUPPLÉMENTS ================= -->
+      <div class="formulas-section">
+        <h2>💰 Formules & Suppléments</h2>
+        <div class="formulas-grid">
+          <div class="formula-card">
+            <div class="formula-icon">🍟</div>
+            <h4>Frites</h4>
+            <div class="formula-price">+ 1.00€</div>
+          </div>
+          <div class="formula-card">
+            <div class="formula-icon">🥤</div>
+            <h4>Menu (Boisson)</h4>
+            <div class="formula-price">+ 2.50€</div>
+          </div>
+          <div class="formula-card">
+            <div class="formula-icon">🍰</div>
+            <h4>Boisson + Dessert</h4>
+            <div class="formula-price">+ 3.60€</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer damier -->
+    <div class="checkered-row"></div>
+    <div class="checkered-header"></div>
+
+    <script src="Script.js"></script>
+  </body>
+</html>

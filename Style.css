@@ -1,0 +1,693 @@
+/* ================================================= */
+/* VARIABLES */
+/* ================================================= */
+
+:root {
+    --bg-main: #f6f6f6;
+    --white: #ffffff;
+    --text-dark: #111111;
+    --text-light: #6b6b6b;
+    --border-light: #ececec;
+    --primary: #000000;
+    --radius: 18px;
+}
+
+/* ================================================= */
+/* RESET */
+/* ================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-main);
+    color: var(--text-dark);
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* ================================================= */
+/* CONTAINER */
+/* ================================================= */
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 50px 24px 80px;
+}
+
+/* ================================================= */
+/* HEADER DISCRET */
+/* ================================================= */
+
+.checkered-header,
+.checkered-row {
+    height: 6px;
+    background: linear-gradient(90deg,#eee 25%,transparent 25%,transparent 50%,#eee 50%,#eee 75%,transparent 75%);
+    background-size: 20px 20px;
+}
+
+/* ================================================= */
+/* FILTRES */
+/* ================================================= */
+
+.filter-section {
+    margin-bottom: 50px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.filter-btn {
+    background: var(--white);
+    border: 1px solid var(--border-light);
+    padding: 10px 22px;
+    border-radius: 40px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.filter-btn:hover {
+    background: #f2f2f2;
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* ================================================= */
+/* CATEGORIES */
+/* ================================================= */
+
+.menu-category {
+    margin-bottom: 60px;
+    animation: fadeIn 0.6s ease;
+}
+
+/* 🚨 CETTE LIGNE EST CRUCIALE */
+.menu-category[style*="display: none"] {
+    display: none !important;
+}
+
+.menu-category[style*="display: block"] {
+    display: block !important;
+}
+/* ================================================= */
+/* TITRES */
+/* ================================================= */
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* ================================================= */
+/* GRID */
+/* ================================================= */
+
+.menu-grid,
+.burgers-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+/* ================================================= */
+/* CARDS */
+/* ================================================= */
+
+.menu-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 35px rgba(0,0,0,0.08);
+}
+
+.menu-card img {
+    height: 190px;
+    object-fit: cover;
+}
+
+/* ================================================= */
+/* CARD CONTENT */
+/* ================================================= */
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.card-price {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+/* ================================================= */
+/* INFO BOX */
+/* ================================================= */
+
+.info-box {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 25px;
+    margin-bottom: 35px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+.info-box h3 {
+    margin-bottom: 18px;
+    font-size: 18px;
+}
+
+/* ================================================= */
+/* TACOS SIZES */
+/* ================================================= */
+
+.tacos-sizes-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 18px;
+}
+
+.size-card {
+    background: #fafafa;
+    border-radius: var(--radius);
+    text-align: center;
+    transition: 0.25s ease;
+    cursor: pointer;
+}
+
+.size-card:hover {
+    background: #2701ae;
+    color: #fff;
+}
+
+.size-image {
+    width: 70px;
+    margin: 0 auto 12px;
+}
+
+.size-name {
+    font-weight: 600;
+    display: block;
+}
+
+.size-detail {
+    font-size: 13px;
+    opacity: 0.7;
+}
+
+.item-price {
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+/* ================================================= */
+/* INGREDIENTS (SCROLL HORIZONTAL) */
+/* ================================================= */
+
+.ingredients-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.ingredient-card {
+    min-width: 120px;
+    background: #fafafa;
+    border-radius: var(--radius);
+    padding: 15px;
+    text-align: center;
+    transition: 0.25s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.ingredient-card:hover {
+       background: #2701ae;
+
+    color: #fff;
+}
+
+.ingredient-image {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto 10px;
+}
+
+/* ================================================= */
+/* SAUCES */
+/* ================================================= */
+
+.sauces-display {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+.sauce-item {
+    min-width: 120px;
+    background: #fafafa;
+    border-radius: 30px;
+    padding: 14px;
+    text-align: center;
+    transition: 0.25s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.sauce-item:hover {
+      background: #2701ae;
+
+    color: #fff;
+}
+
+.sauce-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-bottom: 8px;
+}
+
+/* ================================================= */
+/* FORMULES */
+/* ================================================= */
+
+.formulas-section {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+}
+
+.formulas-section h2 {
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.formulas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 22px;
+}
+
+.formula-card {
+    background: #fafafa;
+    border-radius: var(--radius);
+    padding: 28px;
+    text-align: center;
+    transition: 0.25s ease;
+}
+
+.formula-card:hover {
+    transform: translateY(-4px);
+        background: #2701ae;
+
+    color: #fff;
+}
+
+.formula-icon {
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+
+.formula-card h4 {
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.formula-price {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+/* ================================================= */
+/* TWO COLUMNS */
+/* ================================================= */
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* ================================================= */
+/* RESPONSIVE */
+/* ================================================= */
+
+@media (max-width: 1024px) {
+    .two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-grid,
+    .burgers-list {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    }
+
+    .container {
+        padding: 35px 16px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid,
+    .burgers-list {
+        grid-template-columns: 1fr;
+    }
+
+    .filter-btn {
+        font-size: 13px;
+        padding: 8px 16px;
+    }
+}
+
+/* ================================================= */
+/* SCROLLBAR DISCRETE */
+/* ================================================= */
+
+/* ================================================= */
+/* SUPPLÉMENTS - HORIZONTAL */
+/* ================================================= */
+
+.horizontal-scroll {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 10px 0;
+    flex-wrap: nowrap;
+}
+
+.horizontal-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 100px;
+    padding: 15px;
+    background: #fafafa;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    text-align: center;
+    font-weight: 500;
+    transition: 0.25s ease;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.horizontal-item:hover {
+    background: var(--primary);
+    color: #fff;
+}
+
+.horizontal-item img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* ================================================= */
+/* OPTIMISATIONS - ESPACEMENT COMPACT */
+/* ================================================= */
+
+.container {
+    padding: 35px 20px 60px;
+}
+
+.menu-category {
+    margin-bottom: 45px;
+}
+
+.section-header {
+    margin-bottom: 20px;
+}
+
+.section-header h1 {
+    font-size: 24px;
+}
+
+.header-image {
+    max-height: 120px;
+    object-fit: contain;
+    margin-top: 10px;
+}
+
+/* ================================================= */
+/* GRIDS COMPACTES */
+/* ================================================= */
+
+.menu-grid,
+.burgers-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+}
+
+.tacos-sizes-display {
+    gap: 15px;
+}
+
+.formulas-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 18px;
+}
+
+/* ================================================= */
+/* CARDS COMPACTES */
+/* ================================================= */
+
+.menu-card img {
+    height: 160px;
+}
+
+.card-content {
+    padding: 16px;
+}
+
+.card-content h3 {
+    font-size: 15px;
+}
+
+.card-price {
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+/* ================================================= */
+/* INFO BOX COMPACT */
+/* ================================================= */
+
+.info-box {
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.info-box h3 {
+    font-size: 16px;
+    margin-bottom: 14px;
+}
+
+/* ================================================= */
+/* SIZES COMPACT */
+/* ================================================= */
+
+.size-card {
+    padding: 16px;
+}
+
+.size-image {
+    max-width: 70px;
+}
+
+.size-name {
+    font-size: 15px;
+}
+
+.size-detail {
+    font-size: 12px;
+}
+
+/* ================================================= */
+/* INGREDIENTS COMPACT */
+/* ================================================= */
+
+.ingredient-card {
+    padding: 12px;
+    min-width: 85px;
+}
+
+.ingredient-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.ingredient-card span {
+    font-size: 12px;
+}
+
+/* ================================================= */
+/* SAUCES COMPACT */
+/* ================================================= */
+
+.sauce-item {
+    padding: 12px;
+    min-width: 90px;
+}
+
+.sauce-img {
+    width: 50px;
+    height: 50px;
+}
+
+.sauce-item span {
+    font-size: 12px;
+}
+
+/* ================================================= */
+/* FORMULAS COMPACT */
+/* ================================================= */
+
+.formulas-section {
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.formulas-section h2 {
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.formula-card {
+    padding: 20px;
+}
+
+.formula-icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.formula-card h4 {
+    font-size: 14px;
+}
+
+.formula-price {
+    font-size: 15px;
+}
+
+/* ================================================= */
+/* FILTRES STICKY (OPTIONNEL) */
+/* ================================================= */
+
+.filter-section {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--bg-main);
+    padding: 15px 0;
+    margin-bottom: 30px;
+    transition: box-shadow 0.3s ease;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    font-size: 13px;
+}
+
+/* ================================================= */
+/* RESPONSIVE ULTRA COMPACT */
+/* ================================================= */
+
+@media (max-width: 768px) {
+    .container {
+        padding: 25px 12px 50px;
+    }
+
+    .menu-grid,
+    .burgers-list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 12px;
+    }
+
+    .section-header h1 {
+        font-size: 20px;
+    }
+
+    .menu-card img {
+        height: 130px;
+    }
+
+    .filter-btn {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid,
+    .burgers-list {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .tacos-sizes-display {
+        flex-direction: column;
+    }
+}
+
+
+.menu-category.hidden {
+    display: none !important;
+}
+
+.menu-category:not(.hidden) {
+    display: block !important;
+}
